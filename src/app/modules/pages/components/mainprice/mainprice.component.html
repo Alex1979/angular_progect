@@ -1,0 +1,20 @@
+<div class="row container-mainprice">
+	<a class='mainprice mb-3 col-lg-6' *ngFor='let dishItem of dish' routerLink='/fullrecipe/{{dishItem.id}}'>
+		<!-- routerLink="/fullrecipe/{{dishItem.id}}" -->
+		<article class="d-flex justify-content-between align-items-end">
+			<h4 class="mainprice-title">{{dishItem.dishname}}</h4>
+			<div class="mainprice-line"></div>
+			<p class="mainprice-price">${{dishItem.dishprice}}</p>
+		</article>
+		<p class="mainprice-subtitle">
+			{{dishItem.dishdescription}}
+		</p>
+	</a>
+</div>
+<div class="d-flex justify-content-center py-5">
+	<button type="button" class="btn btn-outline-info">
+		load more <i class="fa fa-chevron-down" aria-hidden="true"></i>
+	</button>
+</div>
+<!-- <router-outlet></router-outlet>
+ -->
