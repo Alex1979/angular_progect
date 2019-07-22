@@ -3,9 +3,9 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './shared/components/home/home.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { MenuModule } from './modules/menu/menu.module';
@@ -14,11 +14,13 @@ import { SliderComponent } from './shared/components/slider/slider.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './modules/menu/menu-routing.module';
 import { InMemoryDataService } from './in-memory-data.service';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     HeaderComponent,
     FooterComponent,
     SliderComponent
@@ -27,8 +29,11 @@ import { InMemoryDataService } from './in-memory-data.service';
     BrowserModule,
     MenuModule,
     PagesModule,
+    NgbModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CarouselModule,
+    AngularFontAwesomeModule
 /*    HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
@@ -37,7 +42,6 @@ import { InMemoryDataService } from './in-memory-data.service';
   providers: [
     AppRoutingModule,
     AppComponent,
-    HomeComponent,
     HeaderComponent,
     FooterComponent,
     MenuModule,

@@ -1,1 +1,23 @@
-<p>slider works!</p>
+<div class="pt-3 pb-3">
+	<h2 class="headline__h2">featured dishes</h2>
+  <owl-carousel-o [options]="customOptions">
+    <ng-template carouselSlide class="row"  *ngFor="let ratingitem of rating">
+    	<div class="card d-flex flex-column col">
+    		<div class="card__imgbox">
+    			 <img [src]='ratingitem.dishImg' />
+    		</div>
+				<div class="card__footer d-flex justify-content-between">
+					<p class="card__caption">{{ratingitem.dishTitle}}</p>
+					<span class="card__price text-right">{{ratingitem.dishPrice}}</span>
+				</div>
+				<div class="card__rating">
+					<i class="fa fa-star fa-star-yellow"></i>
+					<i class="fa fa-star fa-star-yellow"></i>
+					<i class="fa fa-star fa-star-yellow"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+				</div>
+    	</div>
+    </ng-template>
+  </owl-carousel-o>
+</div>

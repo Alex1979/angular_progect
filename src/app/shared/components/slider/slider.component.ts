@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
   selector: 'app-slider',
@@ -7,9 +8,58 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SliderComponent implements OnInit {
 
-  constructor() { }
-  logopath = "../assets/img/logo_footer.png";
+  public rating: Array<any> = [
+		{ dishImg: '../../../../assets/img/image_one.jpg',
+      dishTitle: 'Fugiat nulla sint',
+      dishPrice: '$30',
+    },
+		{  dishImg: '../../../../assets/img/image_two.jpg',
+      dishTitle: 'Daute irure dolor',
+      dishPrice: '$24',
+    },
+		{  dishImg: '../../../../assets/img/image_three.jpg',
+      dishTitle: 'Pim minim veniam',
+      dishPrice: '$17',
+    },
+		{ dishImg: '../../../../assets/img/image_four.jpg',
+      dishTitle: 'Officia deserunt mollit',
+      dishPrice: '$60',
+    },
+    {  dishImg: '../../../../assets/img/image_two.jpg',
+      dishTitle: 'Daute irure dolor',
+      dishPrice: '$24',
+    },
+	];
 
+  customOptions: OwlOptions = {
+    loop: true,
+    mouseDrag: false,
+    touchDrag: false,
+    pullDrag: false,
+    dots: false,
+    navSpeed: 700,
+    navText: ['Next', 'Prev'],
+    responsive: {
+      0: {
+        items: 1
+      },
+      576: {
+        items: 2
+      },
+      768: {
+        items: 3
+      },
+      992: {
+        items: 4
+      }
+    },
+    nav: true
+  }
+
+
+  constructor() {
+  }
+ 
   ngOnInit() {
   }
 
