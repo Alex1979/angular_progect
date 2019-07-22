@@ -3,8 +3,8 @@
 /* typography */
 
 .headline {
-	&__h2 {
-		font-size: 1.75em;
+	&-h2 {
+		font-size: 1.5em;
 		text-transform: uppercase;
 		color: $color-deepkgrey;
 		font-weight: bold;
@@ -16,20 +16,40 @@
 
 .card {
 	padding: 1rem;
+  border: 1px solid lighten($color-ultralightgray, .5);
+  border-right: 0;
 
-	&__imgbox{
+  &:hover {
+  	cursor: pointer;
+  	@include box-shadow;
+  }
 
+	&-caption{
+		font-size: .85rem;
+		font-style: italic;
+		color: $color-deepkgrey;
 	}
 
-	&__caption{
-
+	&-price {
+		color: $color-red;
 	}
 
-	&__price {
-		
+	&-footer {
+    padding: .75rem 0;
+	}
+}
+
+/* custom form */
+
+.form {
+	&-label {
+		font-size: 1em;
+		font-color: $color-deepkgrey;
 	}
 
-	&__footer {
-
+	&-samll {
+		font-size: .75rem;
+		font-style: italic;
+		font-family: $color-lightgrey;
 	}
 }

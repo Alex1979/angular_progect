@@ -13,3 +13,8 @@ $color-yellow: #f1df1a;
 
 /*		btn		*/
 $btn-color: #d7d5d5;
+
+/* 		mixin		*/
+@mixin box-shadow($x-axis: 1px, $y-axis: 2px, $blur: 5px, $color: $color-ultralightgray) {
+  box-shadow: $x-axis $y-axis $blur $color;
+}

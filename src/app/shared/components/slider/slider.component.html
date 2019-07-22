@@ -1,22 +1,22 @@
 <div class="pt-3 pb-3">
-	<h2 class="headline__h2">featured dishes</h2>
-  <owl-carousel-o [options]="customOptions">
-    <ng-template carouselSlide class="row"  *ngFor="let ratingitem of rating">
-    	<div class="card d-flex flex-column col">
-    		<div class="card__imgbox">
+	<h2 class="headline-h2">featured dishes</h2>
+  <owl-carousel-o [options]="customOptions" class="row">
+    <ng-template carouselSlide *ngFor="let ratingitem of rating">
+    	<div class="d-flex flex-column col">
+    		<div class="card">
     			 <img [src]='ratingitem.dishImg' />
-    		</div>
-				<div class="card__footer d-flex justify-content-between">
-					<p class="card__caption">{{ratingitem.dishTitle}}</p>
-					<span class="card__price text-right">{{ratingitem.dishPrice}}</span>
+				<div class="card-footer d-flex justify-content-between">
+					<p class="card-caption">{{ratingitem.dishTitle}}</p>
+					<span class="card-price text-right">{{ratingitem.dishPrice}}</span>
 				</div>
-				<div class="card__rating">
+				<div class="card-rating">
 					<i class="fa fa-star fa-star-yellow"></i>
 					<i class="fa fa-star fa-star-yellow"></i>
 					<i class="fa fa-star fa-star-yellow"></i>
 					<i class="fa fa-star"></i>
 					<i class="fa fa-star"></i>
 				</div>
+			</div>
     	</div>
     </ng-template>
   </owl-carousel-o>

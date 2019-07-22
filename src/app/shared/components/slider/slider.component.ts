@@ -33,12 +33,11 @@ export class SliderComponent implements OnInit {
 
   customOptions: OwlOptions = {
     loop: true,
-    mouseDrag: false,
-    touchDrag: false,
-    pullDrag: false,
-    dots: false,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: true,
+    dots: true,
     navSpeed: 700,
-    navText: ['Next', 'Prev'],
     responsive: {
       0: {
         items: 1
@@ -52,8 +51,7 @@ export class SliderComponent implements OnInit {
       992: {
         items: 4
       }
-    },
-    nav: true
+    }
   }
 
 
