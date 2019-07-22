@@ -1,7 +1,7 @@
 export class MenuInterFace {
 	id: number;
-  dishname: string;
-  dishdescription: string;
-  dishweight: number;
-  dishprice: number;
+	dishName: string;
+	dishDescription: string;
+	dishWeight: number;
+	dishPrice: number;
 }

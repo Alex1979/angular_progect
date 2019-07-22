@@ -9,25 +9,27 @@ import { DataService } from './../../../../service/dataservice.service';
 @Component({
   selector: 'app-fullrecipe',
   templateUrl: './fullrecipe.component.html',
-  styleUrls: ['./fullrecipe.component.scss']
+  styleUrls: ['./fullrecipe.component.scss', '../mainprice/mainprice.component.scss']
 })
 export class FullrecipeComponent implements OnInit {
 	
-	@Input() dishes: MenuInterFace[];
+	menuInterface: MenuInterFace;
 
-  constructor(
-    private route: ActivatedRoute,
+  constructor( private route: ActivatedRoute,
     private dataSer: DataService,
-    private location: Location
-	) {}
-
-  ngOnInit(): void {
-  	this.getMenu();
+    private location: Location ) { 
   }
 
-  getMenu(): void {
-    const name = +this.route.snapshot.paramMap.get('id');
-    this.dataSer.getMenu()
-    .subscribe(dishes => this.dishes = dishes);
+  ngOnInit(): void {
+  	this.getDishes();
+  }
+
+  getDishes(): void {
+    const id = +this.route.snapshot.paramMap.get('id');
+    this.dataSer.getDishes(id).subscribe(menuInterface => this.menuInterface = menuInterface);
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 }

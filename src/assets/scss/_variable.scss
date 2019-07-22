@@ -1,5 +1,8 @@
-/*		colors		*/
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
 
+/*		colors		*/
 $color-red: #f34949;
 $color-lightgrey: rgb(180, 180, 180);
 $color-middlegrey: #e3e1e1;

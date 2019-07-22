@@ -1,5 +1,5 @@
-<div class="container">
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg bg-light navbar-light">
+	<div class="container">
 		<a routerLink="/mainprice" class="navbar-brand">
 			<img [src]="logopath" alt="Image logo">
 		</a>
@@ -7,17 +7,17 @@
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" [ngClass]="status ? 'show' : ''">
-	    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-	    	<li class="nav-item text-right" routerLinkActive="active">
-	    		<a routerLink="/mainprice" class="nav-link">home<span class="sr-only">(current)</span></a>
-    		</li>
-	      	<li class="nav-item text-right" routerLinkActive="active">
-	        	<a class="nav-link" routerLink="/reservation">reservation</a>
-	      	</li>
-	      	<li class="nav-item text-right" routerLinkActive="active">
-	        	<a class="nav-link" routerLink="/review">review</a>
-	      	</li>
-	    </ul>
+		    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+		    	<li class="nav-item text-right" routerLinkActive="active">
+		    		<a routerLink="/mainprice" class="nav-link">home<span class="sr-only">(current)</span></a>
+	    		</li>
+		      	<li class="nav-item text-right" routerLinkActive="active">
+		        	<a class="nav-link" routerLink="/reservation">reservation</a>
+		      	</li>
+		      	<li class="nav-item text-right" routerLinkActive="active">
+		        	<a class="nav-link" routerLink="/review">review</a>
+		      	</li>
+	    	</ul>
 		</div>
-	</nav>
-</div>
+	</div>
+</nav>

@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
 import { FullrecipeComponent } from '../fullrecipe/fullrecipe.component';
 import { MenuInterFace } from '../../../../menuinterface';
 import { DataService } from '../../../../service/dataservice.service';
+import { MenuComponent } from '../../../menu/components/menu/menu.component';
+import { switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-mainprice',
@@ -14,19 +16,19 @@ import { DataService } from '../../../../service/dataservice.service';
 
 export class MainpriceComponent implements OnInit {
 
-	dish: MenuInterFace[] = [];
+	public dish: MenuInterFace[] = [];
+  public id: number;
 
-  constructor( private dataService: DataService, private route: ActivatedRoute) {}
+  constructor( 
+    public dataService: DataService, 
+    public route: ActivatedRoute, ) {
+  }
 
   ngOnInit() {
   	this.getMenu();
   }
 
-  getMenu(): void {
-    const dishdetail = +this.route.snapshot.paramMap.get('id');
-    console.log(dishdetail);
-    this.dataService.getMenu()
-    .subscribe(dishes => this.dish = dishes);
+  getMenu(): void{
     this.dataService.getMenu().subscribe( dish => this.dish = dish );
   }
 }

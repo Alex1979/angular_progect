@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule }    from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
@@ -28,13 +28,21 @@ import { InMemoryDataService } from './in-memory-data.service';
     MenuModule,
     PagesModule,
     BrowserAnimationsModule,
-    AppRoutingModule,
-    HttpClientModule,
+    AppRoutingModule
+/*    HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
-    )
+    ) */
   ],
-  providers: [],
+  providers: [
+    AppRoutingModule,
+    AppComponent,
+    HomeComponent,
+    HeaderComponent,
+    FooterComponent,
+    MenuModule,
+    PagesModule
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

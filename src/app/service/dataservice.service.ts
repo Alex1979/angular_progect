@@ -5,7 +5,7 @@ import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import { MenuInterFace } from '../menuinterface';
 import { InMemoryDataService } from '../in-memory-data.service';
-import { menu } from '../test';
+import { MENU } from '../test';
 
 /*const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -20,14 +20,10 @@ export class DataService {
   constructor( /*private http: HttpClient*/ ) { }
 
   getMenu(): Observable<MenuInterFace[]> {
-    return of(menu);
+    return of(MENU);
   }
 
-	/* getDishes(): Observable<MenuInterFace[]> {
-  	return this.http.get<MenuInterFace[]>(this.dishUrl);
- 		.pipe(
-  			tap(_ => this.log('fetched heroes')),
-  			catchError(this.handleError<MenuInterFace[]>('getDishes', [])) 
-  	);*/
+	getDishes(id:number): Observable<MenuInterFace> {
+    return of(MENU.find(dishes => dishes.id === id));
+  }
 }
-

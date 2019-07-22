@@ -13,7 +13,7 @@ export class MenuComponent implements OnInit {
   constructor() { }
 
   clickEvent(){
-    this.status = !this.status;       
+    this.status = !this.status;
 	}
 
   ngOnInit() {

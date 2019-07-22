@@ -4,24 +4,24 @@ import { MainpriceComponent } from './components/mainprice/mainprice.component';
 import { ReservationComponent } from './components/reservation/reservation.component';
 import { ReviewComponent } from './components/review/review.component';
 import { FullrecipeComponent } from './components/fullrecipe/fullrecipe.component';
-import { AppRoutingModule } from '../menu/menu-routing.module'
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
   	MainpriceComponent, 
   	ReservationComponent, 
-  	ReviewComponent, 
-  	FullrecipeComponent
+  	ReviewComponent,
+    FullrecipeComponent
 	],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [
   	MainpriceComponent, 
   	ReservationComponent, 
   	ReviewComponent, 
-  	FullrecipeComponent,
-    AppRoutingModule
+  	FullrecipeComponent
 	]
 })
 export class PagesModule { }
