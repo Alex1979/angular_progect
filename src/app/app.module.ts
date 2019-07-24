@@ -33,11 +33,11 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
     BrowserAnimationsModule,
     AppRoutingModule,
     CarouselModule,
-    AngularFontAwesomeModule
-/*    HttpClientModule,
+    AngularFontAwesomeModule,
+    HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
-    ) */
+    ) 
   ],
   providers: [
     AppRoutingModule,

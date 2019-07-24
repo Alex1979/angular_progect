@@ -6,38 +6,45 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 
-export class InMemoryDataService /*implements InMemoryDbService*/ {
+export class InMemoryDataService implements InMemoryDbService {
   createDb() {
-  	const menudata = [
-			{	"dishname": "Voluptate cillum fugiat.", 
-				"dishdescription": "Cheese, tomato, mushrooms, onions.", 
-				"dishweight": 350, 
-				"dishprice": 50	},
-			{	"dishname": "Arcu pede enim justo.", 
-				"dishdescription": "Tuna, Sweetcorn, Cheese.", 
-				"dishweight": 400, 
-				"dishprice": 45	},
-			{	"dishname": "Cras dapibussemer nisi.", 
-				"dishdescription": "Pineapple, Minced Beef, Cheese.", 
-				"dishweight": 370, 
-				"dishprice": 55	},
-			{	"dishname": "Donec sodales magna.", 
-				"dishdescription": "Tuna, Sweetcorn, Cheese.", 
-				"dishweight": 420, 
-				"dishprice": 47	},
-			{	"dishname": "Quam semper libero.", 
-				"dishdescription": "Cheese, tomato, mushrooms, onions.", 
-				"dishweight": 370, 
-				"dishprice": 55	},
-			{	"dishname": "Saugue velit cursus.", 
-				"dishdescription": "Pineapple, Minced Beef, Cheese.", 
-				"dishweight": 320, 
-				"dishprice": 45	},
-			{	"dishname": "Nam eget dui Etiam.", 
-				"dishdescription": "Chicken, mozzarella cheese, onions.", 
-				"dishweight": 370, 
-				"dishprice": 42	}
+  	const mainprice = [
+			{	id: 1, 
+				dishName: "Voluptate cillum fugiat.", 
+				dishDescription: "Cheese, tomato, mushrooms, onions.", 
+				dishWeight: 350, 
+				dishPrice: 50	},		
+			{	id: 2, 
+				dishName: "Arcu pede enim justo.", 
+				dishDescription: "Tuna, Sweetcorn, Cheese.", 
+				dishWeight: 400, 
+				dishPrice: 45	},
+			{	id: 3, 
+				dishName: "Cras dapibussemer nisi.", 
+				dishDescription: "Pineapple, Minced Beef, Cheese.", 
+				dishWeight: 370, 
+				dishPrice: 55	},
+			{	id: 4, 
+				dishName: "Donec sodales magna.", 
+				dishDescription: "Tuna, Sweetcorn, Cheese.", 
+				dishWeight: 420, 
+				dishPrice: 47	},
+			{	id: 5, 
+				dishName: "Quam semper libero.", 
+				dishDescription: "Cheese, tomato, mushrooms, onions.", 
+				dishWeight: 370, 
+				dishPrice: 55	},
+			{	id: 6, 
+				dishName: "Saugue velit cursus.", 
+				dishDescription: "Pineapple, Minced Beef, Cheese.", 
+				dishWeight: 320, 
+				dishPrice: 45	},
+			{	id: 7, 
+				dishName: "Nam eget dui Etiam.", 
+				dishDescription: "Chicken, mozzarella cheese, onions.", 
+				dishWeight: 370, 
+				dishPrice: 42	}
   	];
-  	return {menudata};
+  	return {mainprice};
 	}
 }
