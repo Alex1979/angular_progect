@@ -5,6 +5,7 @@ import { ReservationComponent } from './components/reservation/reservation.compo
 import { ReviewComponent } from './components/review/review.component';
 import { FullrecipeComponent } from './components/fullrecipe/fullrecipe.component';
 import { RouterModule } from '@angular/router';
+import { SharedModule } from '../../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { RouterModule } from '@angular/router';
 	],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    SharedModule
   ],
   exports: [
   	MainpriceComponent, 

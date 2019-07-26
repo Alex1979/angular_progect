@@ -5,12 +5,14 @@ import { Location } from '@angular/common';
 
 import { MenuInterFace } from './../../../../menuinterface'
 import { DataService } from './../../../../service/dataservice.service';
+import { OrderformComponent } from '../../../../shared/components/orderform/orderform.component';
 
 @Component({
   selector: 'app-fullrecipe',
   templateUrl: './fullrecipe.component.html',
-  styleUrls: ['./fullrecipe.component.scss', '../mainprice/mainprice.component.scss']
+  styleUrls: ['./fullrecipe.component.scss', '../../../../../assets/scss/main.scss']
 })
+
 export class FullrecipeComponent implements OnInit {
 	
 	menuInterface: MenuInterFace;

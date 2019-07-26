@@ -1,0 +1,118 @@
+@import 'variable';
+
+/* typography */
+
+.headline {
+	&-h2 {
+		font-size: 1.5em;
+		text-transform: uppercase;
+		color: $color-deepkgrey;
+		font-weight: bold;
+		margin-bottom: 3rem;
+	}
+}
+
+/* card */
+
+.card {
+	padding: 1rem;
+  border: 1px solid lighten($color-ultralightgray, .5);
+  border-right: 0;
+
+  &:hover {
+  	cursor: pointer;
+  	@include box-shadow;
+  }
+
+	&-caption{
+		font-size: .85rem;
+		font-style: italic;
+		color: $color-deepkgrey;
+	}
+
+	&-price {
+		color: $color-red;
+	}
+
+	&-footer {
+    padding: .75rem 0;
+	}
+}
+
+.mainprice {
+	padding-top: 20px;
+	padding-bottom: 10px;
+
+	&:hover {
+		cursor: pointer;
+		text-decoration: none;
+		@include box-shadow;
+	}
+
+	&-title {
+		font-size: 1em;
+		color: $color-darkgrey;
+		margin-bottom: 0;
+	}
+
+	&-price {
+		font-size: 1.1em;
+		color: $color-darkgrey;
+		font-weight: 700;
+		margin-bottom: 0;
+	}
+
+	&-line {
+		width: 180px;
+		min-width: 40px;
+		height: 1px;
+		background: $color-middlegrey;
+		margin-bottom: 5px;
+	}
+
+	&-subtitle {
+		width: 100%;
+		margin-top: 1rem;
+		color: $color-lightgrey;
+		font-size: .85em;
+		font-weight: 300;
+		font-style: italic;
+	}
+}
+
+/* custom bootsrap */
+
+.btn {
+	border-radius: 0;
+
+	&-outline-info {
+		border-color: $btn-color;
+		color: $btn-color;
+		background: transparent;
+		font-size: .85em;
+
+		&:hover {
+			background: $btn-color;
+			color: #ffffff;
+			text-decoration: none;
+		}
+	}
+
+	&-submit {
+		border-color: $color-deepkgrey;
+		color: $color-deepkgrey;
+		background: transparent;
+		font-size: .85em;
+
+		&:hover {
+			background: $color-deepkgrey;
+			color: #ffffff;
+			text-decoration: none;
+		}
+	}
+
+	.fa-chevron-down {
+		font-size: .75em;
+		padding-left: 5px;
+	}
+}

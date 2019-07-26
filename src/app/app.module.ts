@@ -6,24 +6,20 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './shared/components/header/header.component';
-import { FooterComponent } from './shared/components/footer/footer.component';
 import { MenuModule } from './modules/menu/menu.module';
 import { PagesModule } from './modules/pages/pages.module';
-import { SliderComponent } from './shared/components/slider/slider.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './modules/menu/menu-routing.module';
 import { InMemoryDataService } from './in-memory-data.service';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { OrderformComponent } from './shared/components/orderform/orderform.component';
+import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    SliderComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -37,15 +33,14 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
-    ) 
+    ),
+    SharedModule
   ],
   providers: [
     AppRoutingModule,
-    AppComponent,
-    HeaderComponent,
-    FooterComponent,
     MenuModule,
-    PagesModule
+    PagesModule,
+    CarouselModule
   ],
   bootstrap: [AppComponent]
 })
