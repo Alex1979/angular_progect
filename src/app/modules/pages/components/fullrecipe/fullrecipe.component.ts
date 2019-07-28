@@ -15,7 +15,8 @@ import { OrderformComponent } from '../../../../shared/components/orderform/orde
 
 export class FullrecipeComponent implements OnInit {
 	
-	menuInterface: MenuInterFace;
+	public menuInterface: MenuInterFace;
+  public showMenBlock;
 
   constructor( private route: ActivatedRoute,
     private dataSer: DataService,

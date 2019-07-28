@@ -6,17 +6,15 @@ import { Router } from '@angular/router';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
+
 export class HeaderComponent implements OnInit {
 
 	titlepath = "../assets/img/headle_title.png";
 
-  	constructor( private router: Router) {
+	constructor( private router: Router) {
 	}
-
 
   ngOnInit() {
 
   }
-
-
 }

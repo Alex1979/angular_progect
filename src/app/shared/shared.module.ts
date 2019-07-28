@@ -7,19 +7,19 @@ import { SliderComponent } from './components/slider/slider.component';
 import { OrderformComponent } from './components/orderform/orderform.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { ModalComponent } from './components/modal/modal.component';
-
+import { MenuModule } from '../modules/menu/menu.module';
 
 @NgModule({
   declarations: [ 
   	HeaderComponent,
   	FooterComponent,
   	SliderComponent,
-  	OrderformComponent,
-  	ModalComponent
+  	OrderformComponent
 	],
   imports: [
     CommonModule,
-    CarouselModule
+    CarouselModule,
+    MenuModule
   ],
   exports:[ 
 	  HeaderComponent,
@@ -29,4 +29,5 @@ import { ModalComponent } from './components/modal/modal.component';
     CarouselModule 
   ]
 })
+
 export class SharedModule { }

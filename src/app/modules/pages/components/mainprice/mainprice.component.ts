@@ -14,11 +14,10 @@ import { switchMap } from 'rxjs/operators';
   styleUrls: ['./mainprice.component.scss', '../../../../../assets/scss/main.scss']
 })
 
-export class MainpriceComponent implements OnInit {
+export class MainpriceComponent {
 
 	public dish: MenuInterFace[] = [];
   public id: number;
-  public showMenBlock: boolean = true;
 
   constructor( 
     public dataService: DataService, 
