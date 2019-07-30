@@ -1,18 +1,20 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import { Observable, of } from 'rxjs';
-import { catchError, map, tap } from 'rxjs/operators';
-
+import { Observable } from 'rxjs';
 import { MenuInterFace } from '../menuinterface';
-
+import { TopDishes } from '../topdishes';
+import { Review } from '../review';
 
 
 @Injectable({ providedIn: 'root' })
 
 export class DataService {
 
-	private dishUrl = 'api/mainprice';
+	private dishUrl = '/api/mainprice';
+  private topDishUrl = '/api/topdishes';
+  private reviewUrl = '/api/review';
+
 
 	httpOptions = {
  		headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -27,5 +29,22 @@ export class DataService {
 	getDishes(id:number): Observable<MenuInterFace> {
 		const url =`${this.dishUrl}/${id}`;
     return this.http.get<MenuInterFace>(url);
+  }
+
+  topDishes(): Observable<TopDishes[]>{
+    return this.http.get<TopDishes[]>(this.topDishUrl);
+  }
+/* 
+  topdish(){
+    
+  }
+*/
+/*
+  getReview(){
+   
+  }
+  */
+  getReviews(): Observable<Review[]>{
+     return this.http.get<Review[]>(this.reviewUrl);
   }
 }

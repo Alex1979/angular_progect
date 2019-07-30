@@ -1,1 +1,12 @@
-<p>review works!</p>
+<div class=" container-maincontent">
+	<h2 class="headline-h2"> Rewiev </h2>
+	<section *ngFor="let reviewItem of review" class="block d-flex justify-content-between align-items-start">
+		<div class="block-img">
+			<img [src]="reviewItem.img" alt="reviewItem.title">
+		</div>
+		<article class="block-content">
+			<h3 class="headline-h3">{{reviewItem.title}}</h3>
+			<p class="block-text">{{reviewItem.text}}</p>
+		</article>	
+	</section>
+</div>

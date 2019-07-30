@@ -6,7 +6,6 @@ import { FullrecipeComponent } from '../fullrecipe/fullrecipe.component';
 import { MenuInterFace } from '../../../../menuinterface';
 import { DataService } from '../../../../service/dataservice.service';
 import { MenuComponent } from '../../../menu/components/menu/menu.component';
-import { switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-mainprice',
@@ -17,7 +16,6 @@ import { switchMap } from 'rxjs/operators';
 export class MainpriceComponent {
 
 	public dish: MenuInterFace[] = [];
-  public id: number;
 
   constructor( 
     public dataService: DataService, 

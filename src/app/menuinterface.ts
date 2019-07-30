@@ -1,4 +1,4 @@
-export class MenuInterFace {
+export interface MenuInterFace {
 	id: number;
 	dishName: string;
 	dishDescription: string;

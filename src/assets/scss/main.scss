@@ -10,6 +10,14 @@
 		font-weight: bold;
 		margin-bottom: 3rem;
 	}
+
+	&-h3 {
+		font-size: 1.25em;
+		text-transform: capitalize;
+		color: $color-deepkgrey;
+		font-weight: bold;
+		margin-bottom: 1rem;
+	}
 }
 
 /* card */
